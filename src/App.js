@@ -7,10 +7,11 @@ function App() {
     e.preventDefault();
     let number = parseInt(count);
     if (number <= 0) {
-      return (number = 1);
+      number = 1;
+      //as we were using return value here settext function was not approachable as this function was returning from here as soon as condition was met
     }
     if (number > data.length - 1) {
-      return (number = data.length - 1);
+      number = data.length - 1;
     }
     setText(data.slice(0, number));
   };
